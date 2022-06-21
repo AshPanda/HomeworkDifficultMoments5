@@ -17,7 +17,7 @@
 #include <list>
 #include <deque>
 #include <queue>
-//#include <map>
+
 #include <cctype>
 using namespace std;
 
@@ -45,16 +45,7 @@ void task1()
 }
 
 //Task #2
-/*bool my_isalnum(char ch)
-{
-    return std::isalnum(static_cast<unsigned char>(ch));
-}
-int count_alnums(const std::string& s)
-{
-    return std::count_if(s.begin(), s.end(),
-       [](unsigned char c) { return std::isalnum(c); } // correct
-    );
-}*/
+
 
 string getSentence(string& s)
 {
@@ -69,7 +60,7 @@ string getSentence(string& s)
             if (stopMarks.find(c) != string::npos)
             {
                 s.erase(0, temp.size());
-               // if (temp[0] == ' ') { temp.erase(0, 1); }
+                if (temp[0] == ' ') { temp.erase(0, 1); }
                 return temp;
             }
 
